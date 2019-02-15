@@ -10,12 +10,26 @@
       </title>
    </head>
    <body>
+      <a name="top"></a>
       <header>
          <h1>Yet Another Static Site (Generator) Documentation</h1>
             <h2>Detailed Information About Program Options</h2>
       </header>
       <div id="content">
-      <h2>Notes</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#notes">Notes</a></li>
+                  <li><a href="#create">Creating new site project</a></li>
+                  <li><a href="#build">Building existing project</a></li>
+                  <li><a href="#server">Server mode</a></li>
+                  <li><a href="#help">Help command</a></li>
+                  <li><a href="#version">Version command</a></li>
+                  <li><a href="#license">License command</a></li>
+                  <li><a href="#readme">Readme command</a></li>
+               </ul>
+            </details>
+      <h2><a name="notes"></a>Notes</h2>
 <ul>
 <li>If you want to run the program from other directory, you should set the
 environment variable <code>YASSDIR</code> to your current directory. Example:
@@ -23,7 +37,8 @@ environment variable <code>YASSDIR</code> to your current directory. Example:
 <li>If you use AppImage version of program, replace <code>yass</code> in examples with
 name of AppImage file (if not changed, this will be <code>yass-x86_64.AppImage</code>).</li>
 </ul>
-<h2>Creating new site project</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="create"></a>Creating new site project</h2>
 <p>To create new site project type in the directory where the file <code>yass</code> is
 <code>./yass create [ProjectName]</code> where <code>[ProjectName]</code> is the name of your site
 project. It will be the name of directory too. This command create the
@@ -50,7 +65,8 @@ stored.</li>
 site.</li>
 <li>File <em>site.cfg</em> is configuration file of project.</li>
 </ul>
-<h2>Building existing project</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="build"></a>Building existing project</h2>
 <p>To build any existing site project, type in directory where the file <code>yass</code>
 is <code>./yass build [ProjectName]</code> where <code>[ProjectName]</code> is name of your site
 project. It will convert any not excluded file with extension <code>.md</code> to
@@ -78,7 +94,8 @@ directory):</p>
 images
   |-newimage.png
 </code></pre>
-<h2>Server mode</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="server"></a>Server mode</h2>
 <p>To run the program in server mode, type in the directory where file <code>yass</code>
 is <code>./yass server [ProjectName]</code> where <code>[ProjectName]</code> is name of your site
 project. If you enabled the web server in <code>site.cfg</code> this will start it
@@ -99,18 +116,22 @@ enter <em>http://localhost:[port]/index.html</em></li>
 <li>Monitoring does not delete files. If you delete one, the program will not
 detect it. You must stop, remove old file manually, then restart the server.</li>
 </ul>
-<h2>Help command</h2>
+<h2><a name="help"></a>Help command</h2>
 <p>This command gives only short information about all available program's
 commands. To run it, type in directory where the file <code>yass</code> is <code>./yass help</code>.</p>
-<h2>Version command</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="version"></a>Version command</h2>
 <p>This command gives only short information about the program version. To run
 it, type in directory where the file <code>yass</code> is <code>./yass version</code>.</p>
-<h2>License command</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="license"></a>License command</h2>
 <p>This command gives only short information about the program license. To run
 it, type in directory where the file <code>yass</code> is <code>./yass license</code>.</p>
-<h2>Readme command</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="readme"></a>Readme command</h2>
 <p>This command prints in terminal content of README.md file. To run it, type in
 directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
       <div id="container">
@@ -119,7 +140,7 @@ directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-14 07:58:52 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-15 08:06:19 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

@@ -10,18 +10,28 @@
       </title>
    </head>
    <body>
+      <a name="top"></a>
       <header>
          <h1>Yet Another Static Site (Generator) Documentation</h1>
             <h2>Configuring Project</h2>
       </header>
       <div id="content">
-      <h2>General Informations</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#general">General Informations</a></li>
+                  <li><a href="#configuration">Project configuration</a></li>
+                  <li><a href="#tags">Project wide (global) tags</a></li>
+               </ul>
+            </details>
+      <h2><a name="general"></a>General Informations</h2>
 <p>Whole project configuration is stored in the file <em>site.cfg</em> in main site project
 directory. This file have standard configuration syntax <code>[Key] = [Value]</code>. Each
 pair must be in one line, neither <code>Key</code> nor <code>Value</code> can't contains new line.
 Each line which starts with <code>#</code> is comment, ignored by the program. All
 settings are case-sensitive.</p>
-<h2>Project configuration</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="configuration"></a>Project configuration</h2>
 <p>At this moment here are 5 possible settings for project:</p>
 <ul>
 <li>LayoutDirectory - the path (related to project directory path) where are
@@ -43,10 +53,12 @@ root privileges. Default value is <code>8888</code></li>
 should check for this site changes when working in server mode and
 regenerate the site if needed. Default value is <code>5.0</code>.</li>
 </ul>
-<h2>Project wide (global) tags</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="tags"></a>Project wide (global) tags</h2>
 <p>Project configuration file can contains project wide (global) tags, which can
 be used on each page. For more informations about global tags, please see
 section <a href="tags.html">Templates Tags</a>.</p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
       <div id="container">
@@ -55,7 +67,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-14 07:58:52 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-15 08:06:19 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
