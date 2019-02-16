@@ -8,22 +8,25 @@
 
 a {
    color: #076678;
+   text-decoration: none;
 }
 
 a:hover {
-   color: #9d0006;
+   color:#bc3315;
 }
 
 h2 {
    text-align: center;
    background: #d79921;
+   margin-top: 5px;
+   margin-bottom: 5px;
 }
 
 header {
    text-align: center;
    background: #d65d0e;
-   /*display:inline-block;*/
    padding:6px 24px;
+   margin-bottom: 15px;
 }
 
 header * {
@@ -51,7 +54,7 @@ pre {
 }
 
 a.button {
-   background-color:#7c6f64;
+   background-color:#076678;
    border-radius:3px;
    display:inline-block;
    color:#f2e5bc;
@@ -104,3 +107,6 @@ summary {
    background: #98971a;
 }
 
+p, ul {
+   width:90%;
+}
