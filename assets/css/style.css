@@ -107,6 +107,10 @@ summary {
    background: #98971a;
 }
 
-p, ul {
-   width:90%;
+#content {
+   width: 90%;
+}
+
+li {
+   margin-bottom: 10px;
 }
