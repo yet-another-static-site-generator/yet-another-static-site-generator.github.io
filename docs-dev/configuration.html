@@ -32,7 +32,7 @@ Each line which starts with <code>#</code> is comment, ignored by the program. A
 settings are case-sensitive.</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="configuration"></a>Project configuration</h2>
-<p>At this moment here are 5 possible settings for project:</p>
+<p>Possible settings for project:</p>
 <ul>
 <li>LayoutDirectory - the path (related to project directory path) where are
 stored files with pages layouts. Standard value for this is setting is
@@ -57,6 +57,13 @@ root privileges. Default value is <code>8888</code></li>
 <li>MonitorInterval - any positive number. How often (in seconds) the program
 should check for this site changes when working in server mode and
 regenerate the site if needed. Default value is <code>5.0</code>.</li>
+<li>BaseURL - Base URL of the site. It is needed mostly for creating sitemap,
+but you can use it as a normal the site tag. If your site will be available
+at <code>https://mysite.com/blog</code> then this will be your BaseURL. Default value is
+<code>http://localhost:8888</code>.</li>
+<li>EnableSitemap - Did the program should create sitemap when creating the site.
+Possible values are true or false (case-insensitive). Default value is
+<code>true</code> (create sitemap).</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="tags"></a>Project wide (global) tags</h2>
@@ -72,7 +79,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-17 09:36:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-19 10:21:02 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

@@ -35,10 +35,26 @@ end, etc) just they must start with new line.</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="configuration"></a>Page configuration</h2>
-<p>At this moment is available only one setting for each page:</p>
+<p>Available settings for each page:</p>
+<p>If you have enabled creation of sitemap in the project config file, you can
+set some sitemap parameters too. All sitemap parameter are optional. More
+informations about how sitemap parameters works, you can find at
+<a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">Sitemaps protocol</a>
+page. All sitemap settings are optional.</p>
 <ul>
+<li>priority - The priority of this URL relative to other URLs on your site,
+value between 0.0 and 1.0. Valid values range from <code>0.0</code> to <code>1.0</code>. This
+value does not affect how your pages are compared to pages on other sites—it
+only lets the search engines know which pages you deem most important for the
+crawlers.</li>
+<li>changefreq - How frequently the page is likely to change, value can be:
+<code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code> or <code>never</code>.</li>
+<li>insitemap - optional setting. Did page should be included in sitemap. If you
+want to exclude this page from the sitemap, set it to <code>insitemap: false</code>.
+Default value is <code>true</code>.</li>
 <li>layout - the name of file (without extension) which will be used as template
-for the page. This must be existing file from the project layouts directory.</li>
+for the page. This must be existing file from the project layouts directory.
+It is the only required setting.</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 
@@ -49,7 +65,7 @@ for the page. This must be existing file from the project layouts directory.</li
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-15 08:06:19 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-19 10:21:02 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
