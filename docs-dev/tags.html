@@ -43,6 +43,9 @@ extension). They have syntax: <code>-- [Key]: [Value]</code>. For example:</p>
 <ul>
 <li>Same as global tags, each pair must be in one line. Neither <code>Key</code> nor <code>Value</code>
 can't contains new line.</li>
+<li><code>Key</code> can't have any spaces, thus <code>some value: text</code> is invalid tag and will
+not be parsed by the program. Write instead <code>somevalue: text</code> or
+<code>some_value: text</code>.</li>
 <li>Same as global tags, you can add as many as you want tags to project.</li>
 <li>Tags can be added in any place of a file (at beginning, between text, at end,
 etc) just they must start with new line. The program can't detect tags inside
@@ -112,7 +115,7 @@ to end a tag (instead of <code>_@</code>).</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-19 10:21:02 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-20 07:42:30 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

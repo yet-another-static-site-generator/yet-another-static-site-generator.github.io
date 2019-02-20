@@ -72,7 +72,9 @@ is <code>./yass build [ProjectName]</code> where <code>[ProjectName]</code> is n
 project. It will convert any not excluded file with extension <code>.md</code> to
 HTML file, apply layout to it and move with all others, not excluded files
 to the output directory (by default it is <em>_output</em> directory in <code>[ProjectName]</code>
-directory). This command preserve structure of directories and files in
+directory). Additonally, if you have enabled generating sitemaps, it will
+create one with all pages and file <code>robots.txt</code> to inform crawlers about the
+sitemap. This command preserve structure of directories and files in
 your project. Thus if you create the directory structure like this:</p>
 <pre><code>[ProjectName]
   |-_layouts
@@ -89,8 +91,11 @@ your project. Thus if you create the directory structure like this:</p>
      |-newimage.png
 </code></pre>
 <p>Your new site will be have that directory structure (inside the <em>_output</em>
-directory):</p>
+directory). Files <code>sitemap.xml</code> and <code>robots.txt</code> will be added only when
+you will be have enabled option to create sitemap:</p>
 <pre><code>index.html
+sitemap.xml
+robots.txt
 images
   |-newimage.png
 </code></pre>
@@ -107,7 +112,8 @@ directory for changes to files. If any file will be changed during server work,
 it will regenerate it. If you add any new file, it will be added to the site
 output directory. If you change any layout file from layouts directory all
 HTML files which use this layout (directly, not as included) will be updated
-too.</p>
+too. If you have enabled creating sitemaps, it will be upgraded or created too
+if needed, same with file <code>robots.txt</code>.</p>
 <h3>Limitations</h3>
 <ul>
 <li>At this moment, when you browsing your project, you must enter valid address
@@ -115,6 +121,9 @@ to the file. Going just to <em>http://localhost:[port]/</em> will not works, you
 enter <em>http://localhost:[port]/index.html</em></li>
 <li>Monitoring does not delete files. If you delete one, the program will not
 detect it. You must stop, remove old file manually, then restart the server.</li>
+<li>If you delete page which was in the sitemap, you will be need to edit the
+sitemap manually or delete it completely with file <code>robots.txt</code> to
+regenerate list of the site pages.</li>
 </ul>
 <h2><a name="help"></a>Help command</h2>
 <p>This command gives only short information about all available program's
@@ -140,7 +149,7 @@ directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-19 10:21:02 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-20 07:05:08 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
