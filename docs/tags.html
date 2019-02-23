@@ -10,12 +10,20 @@
       </title>
    </head>
    <body>
+      <a name="top"></a>
       <header>
          <h1>Yet Another Static Site (Generator) Documentation</h1>
             <h2>Template Tags</h2>
       </header>
       <div id="content">
-      <h2>Types of tags</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#types">Types of tags</a></li>
+                  <li><a href="#using">Using tags inside templates files</a></li>
+               </ul>
+            </details>
+      <h2><a name="types"></a>Types of tags</h2>
 <p>Here are two types of tags:</p>
 <h3>Global tags</h3>
 <p>They are defined for whole site in <em>site.cfg</em> file. This file have standard
@@ -35,6 +43,9 @@ extension). They have syntax: <code>-- [Key]: [Value]</code>. For example:</p>
 <ul>
 <li>Same as global tags, each pair must be in one line. Neither <code>Key</code> nor <code>Value</code>
 can't contains new line.</li>
+<li><code>Key</code> can't have any spaces, thus <code>some value: text</code> is invalid tag and will
+not be parsed by the program. Write instead <code>somevalue: text</code> or
+<code>some_value: text</code>.</li>
 <li>Same as global tags, you can add as many as you want tags to project.</li>
 <li>Tags can be added in any place of a file (at beginning, between text, at end,
 etc) just they must start with new line. The program can't detect tags inside
@@ -75,7 +86,8 @@ summary = and another summary
 <p>Main usage of composite tags is <a href="http://docs.adacore.com/aws-docs/templates_parser/template_statements.html#table-statement">TABLE statement</a>
 inside templates. All rules which applies to the normal template tags also
 apply to composite tags</p>
-<h2>Using tags inside templates files</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="using"></a>Using tags inside templates files</h2>
 <p>To use any tags inside template file you must surround selected tag with <code>{%</code>
 and <code>%}</code>. For example, to get value of tag <code>Content</code> add to template file:</p>
 <pre><code>{%Content%}
@@ -94,6 +106,7 @@ whole section.</li>
 </ul>
 <p><strong>Note:</strong> In YASS you will use <code>{%</code> to start a tag (instead of <code>@_</code>) and <code>%}</code>
 to end a tag (instead of <code>_@</code>).</p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
       <div id="container">
@@ -102,7 +115,7 @@ to end a tag (instead of <code>_@</code>).</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-12 07:52:45 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-23 11:13:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

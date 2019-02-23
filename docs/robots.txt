@@ -1,0 +1,1 @@
+Sitemap: https://yet-another-static-site-generator.github.io/docs/sitemap.xml

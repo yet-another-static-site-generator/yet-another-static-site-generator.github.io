@@ -57,13 +57,21 @@ root privileges. Default value is <code>8888</code></li>
 <li>MonitorInterval - any positive number. How often (in seconds) the program
 should check for this site changes when working in server mode and
 regenerate the site if needed. Default value is <code>5.0</code>.</li>
-<li>BaseURL - Base URL of the site. It is needed mostly for creating sitemap,
-but you can use it as a normal the site tag. If your site will be available
-at <code>https://mysite.com/blog</code> then this will be your BaseURL. Default value is
-<code>http://localhost:8888</code>.</li>
+<li>BaseURL - Base URL of the site. It is needed mostly for creating sitemap and
+Atom feed, but you can use it as a normal the site tag. If your site will be
+available at <code>https://mysite.com/blog</code> then this will be your BaseURL.
+Default value is <code>http://localhost:8888</code>.</li>
 <li>EnableSitemap - Did the program should create sitemap when creating the site.
 Possible values are true or false (case-insensitive). Default value is
 <code>true</code> (create sitemap).</li>
+<li>AtomFeedSource - Source which will be used for creating Atom feed of the
+site. Possible values are: <code>none</code> - don't create Atom feed, <code>tags</code> - create
+Atom entries from proper tags in .md files, <code>[filename]</code> - the path (related to
+the project directory path) to markdown file which will be used as a source of
+Atom feed (must have proper tags set inside). For more informations about
+Atom feed tags, please see section <a href="pages.html">Configuring Pages</a>.</li>
+<li>AtomFeedAmount - Number of entries in the Atom feed (if it will be created,
+please see setting above).</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="tags"></a>Project wide (global) tags</h2>
@@ -79,7 +87,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-19 10:21:02 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-23 11:13:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

@@ -10,12 +10,20 @@
       </title>
    </head>
    <body>
+      <a name="top"></a>
       <header>
          <h1>Yet Another Static Site (Generator) Documentation</h1>
             <h2>Configuring Pages</h2>
       </header>
       <div id="content">
-      <h2>General informations</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#general">General Informations</a></li>
+                  <li><a href="#configuration">Page configuration</a></li>
+               </ul>
+            </details>
+      <h2><a name="general"></a>General informations</h2>
 <p>At this moment, all configuration for each page is inside files with page
 content. They have syntax: <code>-- [Key]: [Value]</code>.</p>
 <ul>
@@ -25,12 +33,81 @@ content. They have syntax: <code>-- [Key]: [Value]</code>.</p>
 end, etc) just they must start with new line.</li>
 <li>All settings are case-sensitive.</li>
 </ul>
-<h2>Page configuration</h2>
-<p>At this moment is available only one setting for each page:</p>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="configuration"></a>Page configuration</h2>
+<p>Available settings for each page:</p>
+<p>If you have enabled creation of sitemap in the project config file, you can
+set some sitemap parameters too. All sitemap parameter are optional. More
+informations about how sitemap parameters works, you can find at
+<a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">Sitemaps protocol</a>
+page. All sitemap settings are optional.</p>
+<ul>
+<li>priority - The priority of this URL relative to other URLs on your site,
+value between 0.0 and 1.0. Valid values range from <code>0.0</code> to <code>1.0</code>. This
+value does not affect how your pages are compared to pages on other sites—it
+only lets the search engines know which pages you deem most important for the
+crawlers.</li>
+<li>changefreq - How frequently the page is likely to change, value can be:
+<code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code> or <code>never</code>.</li>
+<li>insitemap - optional setting. Did page should be included in sitemap. If you
+want to exclude this page from the sitemap, set it to <code>insitemap: false</code>.
+Default value is <code>true</code>.</li>
+</ul>
+<p>If you enabled creation of Atom feed in the project config file, you can some
+Atom feed parameters too. How much and how it works, depends on selected source
+of the Atom feed. All of this parameters can be used as a normal page tags too.</p>
+<p>If you selected source of the Atom feed as <code>tags</code>:</p>
+<ul>
+<li>title - Title which will be used as the Atom title entry. Required setting if
+creating Atom feed is enabled.</li>
+<li>updated - Time stamp when page (and Atom feed entry) last time was updated.
+Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style. This
+parameter is optional. If you not set it, the program will use time when file
+html (created from this markdown file) was last time updated.</li>
+</ul>
+<p>Example of markdown file with Atom feed settings for Atom feed source as
+<code>tags</code>:</p>
+<pre><code>-- layout: default
+-- title: awesome text about something
+Here is super awesome text.
+</code></pre>
+<p>If you selected source of the Atom feed as <code>[filename]</code> and this markdown file
+will be used as a source for the Atom feed:</p>
+<ul>
+<li>title - Composite tag (if you want to have more that one entry in the Atom
+feed) which will be used as the Atom entries titles. Required setting if
+creating Atom feed is enabled.</li>
+<li>id - name or id of the HTML element which will be entry point for each Atom
+entry. It will be added to the page address in Atom entries. Required
+setting for creating Atom feed from one file.</li>
+<li>updated - Time stamp when selected Atom feed entry was last time updated.
+Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style.
+Required for each entry if creating Atom feed from one file is enabled.</li>
+</ul>
+<p>Example of markdown file <code>test.md</code> with Atom feed settings for Atom feed
+source as <code>test.md</code>:</p>
+<pre><code>-- layout: news
+-- title: []
+-- id: []
+-- updated: []
+-- news: []
+-- title: second news
+-- id: second
+-- updated: 2019-02-23T10:00:00Z
+-- news: This is the second news.
+-- title: first news
+-- id: first
+-- updated: 2019-02-23T09:59:00Z
+-- news: This is the first news.
+</code></pre>
+<p>And use <a href="http://docs.adacore.com/aws-docs/templates_parser/template_statements.html#table-statement">TABLE statement</a>
+inside <code>news.html</code> layout to show that news.</p>
+<p>One parameter is always required:</p>
 <ul>
 <li>layout - the name of file (without extension) which will be used as template
 for the page. This must be existing file from the project layouts directory.</li>
 </ul>
+<p><a href="#top">^ Top</a></p>
 
       </div>
       <div id="container">
@@ -39,7 +116,7 @@ for the page. This must be existing file from the project layouts directory.</li
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-12 07:52:45 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a></p>
+         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-23 11:13:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/pages.html</loc>
-  <lastmod>2019-02-19</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs-dev/tags.html</loc>
-  <lastmod>2019-02-20</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs-dev/details.html</loc>
-  <lastmod>2019-02-20</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs-dev/installation.html</loc>
-  <lastmod>2019-02-19</lastmod>
+  <lastmod>2019-02-23</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/configuration.html</loc>
-  <lastmod>2019-02-19</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs-dev/quickstart.html</loc>
-  <lastmod>2019-02-19</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs-dev/extending.html</loc>
-  <lastmod>2019-02-19</lastmod>
+  <lastmod>2019-02-23</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/index.html</loc>
-  <lastmod>2019-02-19</lastmod>
+  <lastmod>2019-02-23</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/tags.html</loc>
+  <lastmod>2019-02-23</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/details.html</loc>
+  <lastmod>2019-02-23</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/installation.html</loc>
+  <lastmod>2019-02-23</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/quickstart.html</loc>
+  <lastmod>2019-02-23</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/extending.html</loc>
+  <lastmod>2019-02-23</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/changes.html</loc>
-  <lastmod>2019-02-20</lastmod>
+  <lastmod>2019-02-23</lastmod>
  </url>
 </urlset>
 
