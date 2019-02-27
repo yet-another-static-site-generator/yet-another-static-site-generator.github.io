@@ -92,10 +92,12 @@ your project. Thus if you create the directory structure like this:</p>
 </code></pre>
 <p>Your new site will be have that directory structure (inside the <em>_output</em>
 directory). Files <code>sitemap.xml</code> and <code>robots.txt</code> will be added only when
-you will be have enabled option to create sitemap:</p>
+you will be have enabled option to create sitemap. File <code>atom.xml</code> will
+be added only when you will be have enabled option to create Atom feed:</p>
 <pre><code>index.html
 sitemap.xml
 robots.txt
+atom.xml
 images
   |-newimage.png
 </code></pre>
@@ -113,7 +115,8 @@ it will regenerate it. If you add any new file, it will be added to the site
 output directory. If you change any layout file from layouts directory all
 HTML files which use this layout (directly, not as included) will be updated
 too. If you have enabled creating sitemaps, it will be upgraded or created too
-if needed, same with file <code>robots.txt</code>.</p>
+if needed, same with file <code>robots.txt</code>. If you have enabled creating atom feed,
+it will be upgrade or create <code>atom.xml</code> file if needed.</p>
 <h3>Limitations</h3>
 <ul>
 <li>At this moment, when you browsing your project, you must enter valid address
@@ -123,7 +126,9 @@ enter <em>http://localhost:[port]/index.html</em></li>
 detect it. You must stop, remove old file manually, then restart the server.</li>
 <li>If you delete page which was in the sitemap, you will be need to edit the
 sitemap manually or delete it completely with file <code>robots.txt</code> to
-regenerate list of the site pages.</li>
+regenerate list of the site pages with <code>build</code> command.</li>
+<li>Same with Atom feed, if you delete page which was in feed, you will need to
+edit <code>atom.xml</code> file or delete it to regenerate it with <code>build</code> command.</li>
 </ul>
 <h2><a name="help"></a>Help command</h2>
 <p>This command gives only short information about all available program's
@@ -150,7 +155,7 @@ directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-02-26 10:16:21 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-02-27 09:56:18 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
