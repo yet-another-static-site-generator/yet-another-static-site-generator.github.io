@@ -1,1 +1,1 @@
-Sitemap: http://localhost:8888/sitemap.xml
+Sitemap: https://yet-another-static-site-generator.github.io/sitemap.xml
