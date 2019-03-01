@@ -34,14 +34,14 @@ settings are case-sensitive.</p>
 <h2><a name="configuration"></a>Project configuration</h2>
 <p>Possible settings for project:</p>
 <ul>
-<li>LayoutDirectory - the path (related to project directory path) where are
-stored files with pages layouts. Standard value for this is setting is
-<code>_layouts</code>.</li>
-<li>OutputDirectory - the path (related to project directory path) where
+<li>LayoutDirectory - the path (absolute or related to project directory path)
+where are stored files with pages layouts. Standard value for this is setting
+is <code>_layouts</code>.</li>
+<li>OutputDirectory - the path (absolute related to project directory path) where
 generated site will be stored. Standard values for this setting is
 <code>_output</code>.</li>
-<li>ModulesDirectory - the path (related to project directory path) where
-the program modules will be stored. Standard values for this setting is
+<li>ModulesDirectory - the path (absolute or related to project directory path)
+where the program modules will be stored. Standard values for this setting is
 <code>_modules</code>.</li>
 <li>ExcludedFiles - the list of excluded files and directories from the list
 of sources used to generating the site. All paths must be relative to the
@@ -73,6 +73,12 @@ Atom feed tags, please see section <a href="pages.html">Configuring Pages</a>. D
 value is <code>none</code>.</li>
 <li>AtomFeedAmount - Number of entries in the Atom feed (if it will be created,
 please see setting above).</li>
+<li>StartTagSeparator - any string which will be used as start mark for the
+templates tags. You may want to change it, if you want to use templates from
+other static site generators. Default value is <code>{%</code>.</li>
+<li>EndTagSeparator - any string which will be used as end mark for the templates
+tags. You may want to change it, if you want to use templates from other
+static site generators. Default value is <code>%}</code>.</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="tags"></a>Project wide (global) tags</h2>
@@ -88,7 +94,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-02-27 09:56:18 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-01 09:49:05 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

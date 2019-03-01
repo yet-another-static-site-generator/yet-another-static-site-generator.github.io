@@ -88,8 +88,11 @@ inside templates. All rules which applies to the normal template tags also
 apply to composite tags</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="using"></a>Using tags inside templates files</h2>
-<p>To use any tags inside template file you must surround selected tag with <code>{%</code>
-and <code>%}</code>. For example, to get value of tag <code>Content</code> add to template file:</p>
+<p>To use any tags inside template file you must surround selected tag with values
+sets in <code>site.cfg</code> file for <code>StartTagSeparator</code> and <code>EndTagSeparator</code>. For
+example, with default setting for <code>StartTagSeparator</code> to <code>{%</code> and default
+setting for <code>EndTagSeparator</code> to <code>%}</code> to get value of tag <code>Content</code> add to
+template file:</p>
 <pre><code>{%Content%}
 </code></pre>
 <p><strong>Note:</strong> All tags names are case-sensitive.</p>
@@ -104,8 +107,9 @@ whole section.</li>
 <li><a href="http://docs.adacore.com/aws-docs/templates_parser/macros.html">Macros</a>:
 whole section.</li>
 </ul>
-<p><strong>Note:</strong> In YASS you will use <code>{%</code> to start a tag (instead of <code>@_</code>) and <code>%}</code>
-to end a tag (instead of <code>_@</code>).</p>
+<p><strong>Note:</strong> In YASS you will use by default <code>{%</code> to start a tag (instead of <code>@_</code>)
+and <code>%}</code> to end a tag (instead of <code>_@</code>), unless you set other values in
+<code>site.cfg</code> file.</p>
 <p><a href="#top">^ Top</a></p>
 
       </div>
@@ -115,7 +119,7 @@ to end a tag (instead of <code>_@</code>).</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-02-26 10:16:21 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-01 09:49:05 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
