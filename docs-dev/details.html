@@ -117,10 +117,12 @@ output directory. If you change any layout file from layouts directory all
 HTML files which use this layout (directly, not as included) will be updated
 too. If you have enabled creating sitemaps, it will be upgraded or created too
 if needed, same with file <code>robots.txt</code>. If you have enabled creating atom feed,
-it will be upgrade or create <code>atom.xml</code> file if needed. Additionally, you can
-customize how directory listing looks, by editing <code>directory.html</code> file in
-layouts directory. More informations about available tags, you can find in
-<a href="https://docs.adacore.com/aws-docs/aws/apiref.html#aws-services-directory">AWS API documentation</a>.</p>
+it will be upgrade or create <code>atom.xml</code> file if needed. If you want, you can
+set this command to terminate on any error occurence, during monitoring the
+site. Additionally, you can customize how directory listing looks, by editing
+<code>directory.html</code> file in layouts directory. More informations about available
+tags, you can find in [AWS API documentation]
+(https://docs.adacore.com/aws-docs/aws/apiref.html#aws-services-directory).</p>
 <h3>Limitations</h3>
 <ul>
 <li>Monitoring does not delete files. If you delete one, the program will not
@@ -163,7 +165,7 @@ automatically by the program.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-05 10:50:36 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-06 14:12:02 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
