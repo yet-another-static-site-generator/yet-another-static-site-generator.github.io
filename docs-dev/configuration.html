@@ -57,6 +57,10 @@ root privileges. Default value is <code>8888</code></li>
 <li>StopServerOnError - can have true or false value, case-insensitive. Did
 command <code>server</code> should terminate if error occured, during creating the site.
 Default value is <code>false</code> (don't terminate on error).</li>
+<li>BrowserCommand - Full path to the command which will be used to start the web
+browser with index.html page of the site. String <code>%s</code> will be replaced by
+server URL. If this setting is <code>none</code>, the web browser will be not started,
+same as when the web server is disabled. Default value is <code>none</code>.</li>
 <li>MonitorInterval - any positive number. How often (in seconds) the program
 should check for this site changes when working in server mode and
 regenerate the site if needed. Default value is <code>5.0</code>.</li>
@@ -99,7 +103,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-06 14:09:45 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-07 10:45:43 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
