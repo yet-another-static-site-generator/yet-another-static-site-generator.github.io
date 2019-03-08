@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/pages.html</loc>
-  <lastmod>2019-02-23</lastmod>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/pages.html</loc>
+  <lastmod>2019-03-04</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/configuration.html</loc>
-  <lastmod>2019-02-23</lastmod>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/configuration.html</loc>
+  <lastmod>2019-03-08</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/index.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/tags.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/details.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/installation.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/quickstart.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/extending.html</loc>
-  <lastmod>2019-02-23</lastmod>
- </url>
- <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/changes.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/index.html</loc>
   <lastmod>2019-02-26</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/tags.html</loc>
+  <lastmod>2019-03-04</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/details.html</loc>
+  <lastmod>2019-03-08</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/installation.html</loc>
+  <lastmod>2019-02-26</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/quickstart.html</loc>
+  <lastmod>2019-02-26</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/extending.html</loc>
+  <lastmod>2019-02-26</lastmod>
+ </url>
+ <url>
+  <loc>https://yet-another-static-site-generator.github.io/docs-dev/changes.html</loc>
+  <lastmod>2019-03-08</lastmod>
  </url>
 </urlset>
 

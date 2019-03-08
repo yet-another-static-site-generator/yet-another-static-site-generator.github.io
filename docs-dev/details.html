@@ -134,6 +134,9 @@ sitemap manually or delete it completely with file <code>robots.txt</code> to
 regenerate list of the site pages with <code>build</code> command.</li>
 <li>Same with Atom feed, if you delete page which was in feed, you will need to
 edit <code>atom.xml</code> file or delete it to regenerate it with <code>build</code> command.</li>
+<li>If you edit global tag (in <code>site.cfg</code> file) you will be need to stop the
+program and rebuild whole site with <code>build</code> command, because server can
+monitor only settings changes (it will not rebuild <code>.md</code> files).</li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="help"></a>Help command</h2>
@@ -167,7 +170,7 @@ automatically by the program.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-07 14:25:42 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-08 07:50:48 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

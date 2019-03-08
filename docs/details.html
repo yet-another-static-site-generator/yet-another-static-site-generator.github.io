@@ -27,6 +27,7 @@
                   <li><a href="#version">Version command</a></li>
                   <li><a href="#license">License command</a></li>
                   <li><a href="#readme">Readme command</a></li>
+                  <li><a href="#createfile">Create empty markdown file</a></li>
                </ul>
             </details>
       <h2><a name="notes"></a>Notes</h2>
@@ -92,10 +93,12 @@ your project. Thus if you create the directory structure like this:</p>
 </code></pre>
 <p>Your new site will be have that directory structure (inside the <em>_output</em>
 directory). Files <code>sitemap.xml</code> and <code>robots.txt</code> will be added only when
-you will be have enabled option to create sitemap:</p>
+you will be have enabled option to create sitemap. File <code>atom.xml</code> will
+be added only when you will be have enabled option to create Atom feed:</p>
 <pre><code>index.html
 sitemap.xml
 robots.txt
+atom.xml
 images
   |-newimage.png
 </code></pre>
@@ -106,32 +109,44 @@ is <code>./yass server [ProjectName]</code> where <code>[ProjectName]</code> is 
 project. If you enabled the web server in <code>site.cfg</code> this will start it
 at <em>http://localhost:[port]/</em> (where <em>[port]</em> is port number set in <code>site.cfg</code>,
 by default it is <em>8888</em>) to which you can point your web browser to preview
-the site. Additionally, the program will be monitoring every <em>X</em> seconds (this
-is set in <code>site.cfg</code> file too, default every 5 seconds) your site project
-directory for changes to files. If any file will be changed during server work,
-it will regenerate it. If you add any new file, it will be added to the site
-output directory. If you change any layout file from layouts directory all
-HTML files which use this layout (directly, not as included) will be updated
-too. If you have enabled creating sitemaps, it will be upgraded or created too
-if needed, same with file <code>robots.txt</code>.</p>
+the site. If you enable it too, after the web server start, the program will
+open <code>index.html</code> page in selected web browser. Additionally, the program will
+be monitoring every <em>X</em> seconds (this is set in <code>site.cfg</code> file too, default
+every <em>5</em> seconds) your site project directory for changes to files. If any
+file will be changed during server work, it will regenerate it. If you add any
+new file, it will be added to the site output directory. If you change any
+layout file from layouts directory all HTML files which use this layout
+(directly, not as included) will be updated too. If you have enabled creating
+sitemaps, it will be upgraded or created too if needed, same with file
+<code>robots.txt</code>. If you have enabled creating atom feed, it will be upgrade or
+create <code>atom.xml</code> file if needed. If you want, you can set this command to
+terminate on any error occurence, during monitoring the site. Additionally,
+you can customize how directory listing looks, by editing <code>directory.html</code>
+file in layouts directory. More informations about available tags, you can
+find in [AWS API documentation]
+(https://docs.adacore.com/aws-docs/aws/apiref.html#aws-services-directory).</p>
 <h3>Limitations</h3>
 <ul>
-<li>At this moment, when you browsing your project, you must enter valid address
-to the file. Going just to <em>http://localhost:[port]/</em> will not works, you must
-enter <em>http://localhost:[port]/index.html</em></li>
 <li>Monitoring does not delete files. If you delete one, the program will not
 detect it. You must stop, remove old file manually, then restart the server.</li>
 <li>If you delete page which was in the sitemap, you will be need to edit the
 sitemap manually or delete it completely with file <code>robots.txt</code> to
-regenerate list of the site pages.</li>
+regenerate list of the site pages with <code>build</code> command.</li>
+<li>Same with Atom feed, if you delete page which was in feed, you will need to
+edit <code>atom.xml</code> file or delete it to regenerate it with <code>build</code> command.</li>
+<li>If you edit global tag (in <code>site.cfg</code> file) you will be need to stop the
+program and rebuild whole site with <code>build</code> command, because server can
+monitor only settings changes (it will not rebuild <code>.md</code> files).</li>
 </ul>
+<p><a href="#top">^ Top</a></p>
 <h2><a name="help"></a>Help command</h2>
 <p>This command gives only short information about all available program's
 commands. To run it, type in directory where the file <code>yass</code> is <code>./yass help</code>.</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="version"></a>Version command</h2>
-<p>This command gives only short information about the program version. To run
-it, type in directory where the file <code>yass</code> is <code>./yass version</code>.</p>
+<p>This command gives only short information about the program version and it
+release date. To run it, type in directory where the file <code>yass</code> is
+<code>./yass version</code>.</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="license"></a>License command</h2>
 <p>This command gives only short information about the program license. To run
@@ -141,6 +156,12 @@ it, type in directory where the file <code>yass</code> is <code>./yass license</
 <p>This command prints in terminal content of README.md file. To run it, type in
 directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
 <p><a href="#top">^ Top</a></p>
+<h2><a name="createfile"></a>Create empty markdown file</h2>
+<p>If you want to create a new empty (only with comments) markdown file in your
+site project, type in directory where the file <code>yass</code> is
+<code>./yass [path][filename].md</code>. You may omit file extension, it will be added
+automatically by the program.</p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
       <div id="container">
@@ -149,7 +170,7 @@ directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-23 11:13:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-08 07:50:48 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

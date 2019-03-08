@@ -34,29 +34,39 @@ settings are case-sensitive.</p>
 <h2><a name="configuration"></a>Project configuration</h2>
 <p>Possible settings for project:</p>
 <ul>
-<li>LayoutDirectory - the path (related to project directory path) where are
-stored files with pages layouts. Standard value for this is setting is
-<code>_layouts</code>.</li>
-<li>OutputDirectory - the path (related to project directory path) where
+<li>LayoutDirectory - the path (absolute or related to project directory path)
+where are stored files with pages layouts. Standard value for this is setting
+is <code>_layouts</code>.</li>
+<li>OutputDirectory - the path (absolute related to project directory path) where
 generated site will be stored. Standard values for this setting is
 <code>_output</code>.</li>
-<li>ModulesDirectory - the path (related to project directory path) where
-the program modules will be stored. Standard values for this setting is
+<li>ModulesDirectory - the path (absolute or related to project directory path)
+where the program modules will be stored. Standard values for this setting is
 <code>_modules</code>.</li>
 <li>ExcludedFiles - the list of excluded files and directories from the list
 of sources used to generating the site. All paths must be relative to the
 project directory. If you exclude directory, it whole content will be
 excluded too. Layouts, modules and output directories are excluded by
 default. Default value for this is empty list.</li>
-<li>ServerEnabled - can have true of false value, case-insensitive. Did command
+<li>ServerEnabled - can have true or false value, case-insensitive. Did command
 <code>server</code> should start web server too or not. Default value is <code>true</code> (start
 the web server).</li>
 <li>ServerPort - any number from 1 to 65535. Port on which the web server will
 be listening. Please remember that using ports below 1025 number require
 root privileges. Default value is <code>8888</code></li>
+<li>StopServerOnError - can have true or false value, case-insensitive. Did
+command <code>server</code> should terminate if error occured, during creating the site.
+Default value is <code>false</code> (don't terminate on error).</li>
+<li>BrowserCommand - Full path to the command which will be used to start the web
+browser with index.html page of the site. String <code>%s</code> will be replaced by
+server URL. If this setting is <code>none</code>, the web browser will be not started,
+same as when the web server is disabled. Default value is <code>none</code>.</li>
 <li>MonitorInterval - any positive number. How often (in seconds) the program
 should check for this site changes when working in server mode and
 regenerate the site if needed. Default value is <code>5.0</code>.</li>
+<li>MonitorConfigInterval - any positive number. How often (in seconds) the program
+should check for the site configuration changes when working in server mode and
+reconfigure the site if needed. Default value is <code>60.0</code>.</li>
 <li>BaseURL - Base URL of the site. It is needed mostly for creating sitemap and
 Atom feed, but you can use it as a normal the site tag. If your site will be
 available at <code>https://mysite.com/blog</code> then this will be your BaseURL.
@@ -69,9 +79,18 @@ site. Possible values are: <code>none</code> - don't create Atom feed, <code>tag
 Atom entries from proper tags in .md files, <code>[filename]</code> - the path (related to
 the project directory path) to markdown file which will be used as a source of
 Atom feed (must have proper tags set inside). For more informations about
-Atom feed tags, please see section <a href="pages.html">Configuring Pages</a>.</li>
+Atom feed tags, please see section <a href="pages.html">Configuring Pages</a>. Default
+value is <code>none</code>.</li>
 <li>AtomFeedAmount - Number of entries in the Atom feed (if it will be created,
 please see setting above).</li>
+<li>StartTagSeparator - any string which will be used as start mark for the
+templates tags. You may want to change it, if you want to use templates from
+other static site generators. Default value is <code>{%</code>.</li>
+<li>EndTagSeparator - any string which will be used as end mark for the templates
+tags. You may want to change it, if you want to use templates from other
+static site generators. Default value is <code>%}</code>.</li>
+<li>MarkdownComment - any string which will be used as a start mark for comments
+in parsed markdown files. Default value is <code>--</code></li>
 </ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="tags"></a>Project wide (global) tags</h2>
@@ -87,7 +106,7 @@ section <a href="tags.html">Templates Tags</a>.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 Bartek thindil Jasicki. Generated: 2019-02-23 11:13:06 with <a href="https://github.com/yet-another-static-site-generator/yass">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-08 07:50:48 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
