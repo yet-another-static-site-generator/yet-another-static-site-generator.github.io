@@ -22,6 +22,7 @@
                   <li><a href="#general">General Informations</a></li>
                   <li><a href="#adding">Adding modules to the site project</a></li>
                   <li><a href="#communication">Communication between YASS and modules</a></li>
+                  <li><a href="#api">API informations</a></li>
                   <li><a href="#example">Example module</a></li>
                </ul>
             </details>
@@ -30,9 +31,9 @@
 machine. This mean, for example Bash, Perl, Python scripts or any compiled
 program, anything what can be run from terminal. Second requirement is that
 extension (called <em>module</em>) must have ability to read environment variables,
-because at this moment, this is only one way to communicate between YASS and
-module. Modules are per site not assigned to the program, thus every site can
-have own set of modules to run.</p>
+read standard input and write to standard output, because in that ways YASS and
+module communicate. Modules are per site not assigned to the program, thus
+every site can have own set of modules to run.</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="adding"></a>Adding modules to the site project</h2>
 <p>After creating a site project, you will have directory <code>_modules</code> (with default
@@ -77,22 +78,84 @@ directories. In that situation, you will need to provide any &quot;entry point&q
 executable to run that complicated module.</p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="communication"></a>Communication between YASS and modules</h2>
-<p>At this moment here is only one way communication between the program and
-modules, by environment variables. Before running modules in <em>pre</em> hook YASS
+<p>There are two ways for communication between the program and modules.</p>
+<ul>
+<li>By environment variables: Before running modules in <em>pre</em> hook YASS
 is setting environment variable <code>YASSFILE</code> with full path to currently
-modified file. Before running module in <em>post</em> hook YASS is setting environment
-variable <code>YASSFILE</code> with full path to result file. Additionally, modules have
-access to all other environment variables currently set. For example to
-<code>YASSDIR</code> or <code>APPDIR</code> if you use AppImage version of the program.</p>
+modified file. Before running module in <em>post</em> hook YASS is setting
+environment variable <code>YASSFILE</code> with full path to result file.
+Additionally, modules have access to all other environment variables
+currently set. For example to <code>YASSDIR</code> or <code>APPDIR</code> if you use AppImage
+version of the program.</li>
+<li>By pipes: When the program starts the module, the program grabs input and
+output of the module. Here is available very simple API to manipulate then
+template tags. To use it, module should just send proper command to default
+output and listen to the program's response on default input.</li>
+</ul>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="api"></a>API informations</h2>
+<ul>
+<li>gettag [tagname] - this API command sent to the program, returns value of
+<code>tagname</code> tag. If selected tag is the simple tag, then the program
+immediately value of selected tag. If selected tag is composite tag then
+the program first send amount of the values of the tag and then each value
+for this tag. If tag with selected name does not exists, the program will
+inform the module about it.</li>
+<li>edittag [tagname] (tagindex) [tagvalue] - this API command sent to the
+program, sets new value for selected tag. If selected tag is the simple tag,
+then variable <code>tagindex</code> is not needed (example: <code>edittag name newname</code>).
+When selected tag is the composite tag, then variable <code>tagindex</code> is required.
+Index range for the composite tags starts from 1. If YASS properly modify
+the value of the tag, it will send to module answer <code>Success</code>. If there
+will be any problem with modification, then the program will send the
+information what was wrong.</li>
+<li>During <em>start</em> and <em>end</em> <em>hooks</em> there are available only global tags from
+<code>site.cfg</code> file. During <em>pre</em> and <em>post</em> <em>hooks</em> you can manipulate with page
+tags either.</li>
+<li>Whole command must be one line command, it can't contains new line symbols.</li>
+</ul>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="example"></a>Example module</h2>
 <p>This is very small example of module, which show name of currently processed
-file.</p>
+file, then show value of tag &quot;Name&quot;, then set second value of tag &quot;news&quot; and
+at the end show all values of the tag &quot;news&quot;.</p>
 <pre><code>#!/bin/sh
 
 echo &quot;Now processing: $YASSFILE&quot;
+# get value for tag &quot;Name&quot;
+echo &quot;gettag Name&quot;
+# read value of the tag &quot;Name&quot;
+read name
+# print value of the tag
+echo &quot;$name&quot;
+# set value of tag &quot;Name&quot; to &quot;NewName&quot;
+echo &quot;edittag Name NewName&quot;
+# read result of the operation
+echo &quot;Result:$result&quot;
+# set second value of tag &quot;news&quot; to &quot;NewSite2&quot;
+echo &quot;edittag news 2 NewSite2&quot;
+# get result of operation and print it
+read result of the operation
+echo &quot;Result:$result&quot;
+# get all values for composite tag &quot;news&quot;
+echo &quot;gettag news&quot;
+# read how many values this tag have
+read amount
+# read and print values of the tag
+for (( i=1; i&lt;=$amount; i++ ))
+do
+  read newvalue
+  echo &quot;$newvalue&quot;
+done
 </code></pre>
-<p>Save it as <code>showname.sh</code> file, give it permissions to run <code>chmod 744 showname.sh</code> and put it in <code>modules/pre</code> directory in selected site project.</p>
+<p>Save it as <code>showname.sh</code> file, give it permissions to run <code>chmod 744 showname.sh</code> and put it in <code>modules/pre</code> directory in selected site project.
+Additionally, you been need to add or to <code>site.cfg</code> or to markdown file the
+composite tag <code>news</code> with at least 2 values. For example in <code>site.cfg</code>:</p>
+<pre><code>news = []
+news = first news
+news = second news
+news = last news
+</code></pre>
 <p><a href="#top">^ Top</a></p>
 
       </div>
@@ -102,7 +165,7 @@ echo &quot;Now processing: $YASSFILE&quot;
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-02-26 10:16:21 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-12 10:59:40 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
