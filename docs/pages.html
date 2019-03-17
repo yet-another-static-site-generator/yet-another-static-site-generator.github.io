@@ -66,6 +66,13 @@ creating Atom feed is enabled.</li>
 Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style. This
 parameter is optional. If you not set it, the program will use time when file
 html (created from this markdown file) was last time updated.</li>
+<li>author - The name of the author of the page. This parameter is optional.</li>
+<li>authoremail - The email address of the author of the page. This parameter is
+optional.</li>
+<li>summary - Short summary for this page. This parameter is optional.</li>
+<li>content - Content of the page in Atom feed. If you not set it, then the
+program will load here markdown version of the page content. This parameter
+is optional.</li>
 </ul>
 <p>Example of markdown file with Atom feed settings for Atom feed source as
 <code>tags</code>:</p>
@@ -85,6 +92,15 @@ setting for creating Atom feed from one file.</li>
 <li>updated - Time stamp when selected Atom feed entry was last time updated.
 Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style.
 Required for each entry if creating Atom feed from one file is enabled.</li>
+<li>author - The name of the author of selected Atom feed entry. This is
+optional parameter for each entry.</li>
+<li>authoremail - The email address of the author of selected Atom feed entry.
+This is optional parameter for each entry.</li>
+<li>summary - Short summary for selected Atom feed entry. This is optional
+parameter for each entry.</li>
+<li>content - Content of selected Atom feed entry. If you not set it, then the
+program will load here id of selected Atom feed entry. This parameter is
+optional.</li>
 </ul>
 <p>Example of markdown file <code>test.md</code> with Atom feed settings for Atom feed
 source as <code>test.md</code>:</p>
@@ -93,13 +109,24 @@ source as <code>test.md</code>:</p>
 -- id: []
 -- updated: []
 -- news: []
+-- title: third news
+-- id: latest
+-- updated: 2019-02-23T10:05:00Z
+-- authoremail: jondoe@example.com
+-- author: Jon Doe
+-- news: This is the latest news.
+-- id: third
+-- updated: 2019-02-23T10:02:00Z
+-- news: This is the third news.
 -- title: second news
 -- id: second
 -- updated: 2019-02-23T10:00:00Z
+-- authoremail: jondoe@example.com
 -- news: This is the second news.
 -- title: first news
 -- id: first
 -- updated: 2019-02-23T09:59:00Z
+-- author: Jon Doe
 -- news: This is the first news.
 </code></pre>
 <p>And use <a href="http://docs.adacore.com/aws-docs/templates_parser/template_statements.html#table-statement">TABLE statement</a>
@@ -118,7 +145,7 @@ for the page. This must be existing file from the project layouts directory.</li
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-04 07:15:49 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-16 07:52:39 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

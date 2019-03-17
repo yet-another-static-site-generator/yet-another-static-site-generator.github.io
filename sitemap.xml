@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
   <loc>https://yet-another-static-site-generator.github.io/index.html</loc>
-  <lastmod>2019-03-12</lastmod>
+  <lastmod>2019-03-17T08:31:25Z</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/index.html</loc>
@@ -18,11 +18,11 @@
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/changes.html</loc>
-  <lastmod>2019-03-14</lastmod>
+  <lastmod>2019-03-17T08:25:08Z</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/pages.html</loc>
-  <lastmod>2019-03-14</lastmod>
+  <lastmod>2019-03-17T08:25:08Z</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/extending.html</loc>
@@ -34,7 +34,7 @@
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/configuration.html</loc>
-  <lastmod>2019-03-14</lastmod>
+  <lastmod>2019-03-17T08:25:08Z</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs/tags.html</loc>
@@ -54,7 +54,7 @@
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/changes.html</loc>
-  <lastmod>2019-03-16</lastmod>
+  <lastmod>2019-03-17T08:25:08Z</lastmod>
  </url>
  <url>
   <loc>https://yet-another-static-site-generator.github.io/docs-dev/pages.html</loc>
