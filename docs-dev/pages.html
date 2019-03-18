@@ -130,7 +130,22 @@ source as <code>test.md</code>:</p>
 -- news: This is the first news.
 </code></pre>
 <p>And use <a href="http://docs.adacore.com/aws-docs/templates_parser/template_statements.html#table-statement">TABLE statement</a>
-inside <code>news.html</code> layout to show that news.</p>
+inside <code>news.html</code> layout to show that news:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+     &lt;meta charset=&quot;UTF-8&quot;&gt;
+     &lt;title&gt;News&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     @@TABLE@@
+        &lt;h2&gt;{%title%}&lt;a name=&quot;{%id%}&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+        &lt;p&gt;{%NO_LETTER:updated%}&lt;/p&gt;
+        &lt;p&gt;{%news%}&lt;/p&gt;
+     @@END_TABLE@@
+  &lt;/body&gt;
+</code></pre>
+   </html>
 <p>One parameter is always required:</p>
 <ul>
 <li>layout - the name of file (without extension) which will be used as template
@@ -145,7 +160,7 @@ for the page. This must be existing file from the project layouts directory.</li
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-16 07:52:39 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-03-18 10:36:13 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
