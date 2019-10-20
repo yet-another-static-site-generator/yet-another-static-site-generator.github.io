@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
   <loc>https://yet-another-static-site-generator.github.io/index.html</loc>
-  <lastmod>2019-03-27T08:19:00Z</lastmod>
+  <lastmod>2019-10-20T08:16:00Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/index.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/index.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/quickstart.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/quickstart.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/installation.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/installation.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/changes.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/changes.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/pages.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/pages.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/extending.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/extending.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/details.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/details.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/configuration.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/configuration.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
  <url>
-  <loc>https://yet-another-static-site-generator.github.io/docs/tags.html</loc>
+  <loc>https://yet-another-static-site-generator.github.io/docs/user/tags.html</loc>
   <lastmod>2019-03-25T06:19:17Z</lastmod>
  </url>
 </urlset>
