@@ -60,14 +60,24 @@ in GNAT. Just run GPS, select <em>yass.gpr</em> as a project file and select opt
 <code>Build All</code>.</p>
 </li>
 <li>
-<p>If you prefer using console: in the main source code directory type <code>gprbuild</code>
-for debug mode build or for release mode: <code>gprbuild -XMode=release</code>.</p>
+<p>If you prefer using console: in main source code directory type <code>gprbuild</code>
+for debug mode build or for release mode: <code>gprbuild -XMode=release</code>. If you
+have installed <a href="https://github.com/thindil/bob">Bob</a> you can type <code>bob debug</code>
+for build in debug mode or <code>bob release</code> to prepare release for the program.</p>
 </li>
 </ul>
 <p>If you want to be able to print content of README.md file to terminal (by
 <code>readme</code> program command), copy file README.md to <code>bin</code> directory.</p>
 <p><strong>Note:</strong> If you want to move the program around, compile it in release mode. In
 debug mode the program may have problems with finding all dependencies.</p>
+<h3>Build unit tests</h3>
+<p>Navigate to <code>tests/driver</code> directory from the main directory (where this
+file is):</p>
+<ul>
+<li>From console: type <code>gprbuild -P test_driver.gpr</code></li>
+</ul>
+<p>Or if you have <a href="https://github.com/thindil/bob">Bob</a> installed, type
+<code>bob tests</code>.</p>
 <p><a href="#top">^ Top</a></p>
 
       </div>
@@ -76,7 +86,7 @@ debug mode the program may have problems with finding all dependencies.</p>
             <div id="center"><a href="index.html" class="button">Index</a></div>
       </div>
       <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-10-23 07:06:06 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-11-17 06:44:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
