@@ -1,36 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <link href="assets/css/style.css" rel="stylesheet" />
-      <title>
-            Detailed Information About Program Options |
-         Yet Another Static Site (Generator) Documentation
-      </title>
+      <link href="https://yet-another-static-site-generator.github.io/assets/css/style.css" rel="stylesheet" />
+      <title>Yet Another Static Site (Generator)</title>
    </head>
    <body>
       <a name="top"></a>
       <header>
-         <h1>Yet Another Static Site (Generator) Documentation</h1>
-            <h2>Detailed Information About Program Options</h2>
+         <h1>Yet Another Static Site (Generator)</h1>
       </header>
       <div id="content">
-            <details>
-               <summary>Table of Contents</summary>
-               <ul>
-                  <li><a href="#notes">Notes</a></li>
-                  <li><a href="#create">Creating new site project</a></li>
-                  <li><a href="#build">Building existing project</a></li>
-                  <li><a href="#server">Server mode</a></li>
-                  <li><a href="#help">Help command</a></li>
-                  <li><a href="#version">Version command</a></li>
-                  <li><a href="#license">License command</a></li>
-                  <li><a href="#readme">Readme command</a></li>
-                  <li><a href="#createfile">Create empty markdown file</a></li>
-               </ul>
-            </details>
-      <h2><a name="notes"></a>Notes</h2>
+         <h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Notes</h2>
 <ul>
 <li>If you want to run the program from other directory, you should set the
 environment variable <code>YASSDIR</code> to your current directory. Example:
@@ -38,13 +19,13 @@ environment variable <code>YASSDIR</code> to your current directory. Example:
 <li>If you use AppImage version of program, replace <code>yass</code> in examples with
 name of AppImage file (if not changed, this will be <code>yass-x86_64.AppImage</code>).</li>
 </ul>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="create"></a>Creating new site project</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Creating new site project</h2>
 <p>To create new site project type in the directory where the file <code>yass</code> is
 <code>./yass createnow [ProjectName]</code> for fast create of new project with default
 settings, or <code>./yass create [ProjectName]</code> for creation of new project based
-on your answers to few questions. <code>[ProjectName]</code> is the name of your site
-project. It will be the name of directory too. This command create the
+on your answers on a few questions. <code>[ProjectName]</code> is the name of your site
+project. It will be the name of directory too. This command creates the
 directory with the content:</p>
 <pre><code>[ProjectName]
   |-_layouts
@@ -68,8 +49,8 @@ stored.</li>
 site.</li>
 <li>File <em>site.cfg</em> is configuration file of project.</li>
 </ul>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="build"></a>Building existing project</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Building existing project</h2>
 <p>To build any existing site project, type in directory where the file <code>yass</code>
 is <code>./yass build [ProjectName]</code> where <code>[ProjectName]</code> is name of your site
 project. It will convert any not excluded file with extension <code>.md</code> to
@@ -78,7 +59,7 @@ to the output directory (by default it is <em>_output</em> directory in <code>[P
 directory). Additonally, if you have enabled generating sitemaps, it will
 create one with all pages and file <code>robots.txt</code> to inform crawlers about the
 sitemap. This command preserve structure of directories and files in
-your project. Thus if you create the directory structure like this:</p>
+your project. Thus, if you create the directory structure like this:</p>
 <pre><code>[ProjectName]
   |-_layouts
      |-default.html
@@ -93,10 +74,10 @@ your project. Thus if you create the directory structure like this:</p>
   |-images
      |-newimage.png
 </code></pre>
-<p>Your new site will be have that directory structure (inside the <em>_output</em>
+<p>Your new site will be having that directory structure (inside the <em>_output</em>
 directory). Files <code>sitemap.xml</code> and <code>robots.txt</code> will be added only when
-you will be have enabled option to create sitemap. File <code>atom.xml</code> will
-be added only when you will be have enabled option to create Atom feed:</p>
+you will be having enabled option to create sitemap. File <code>atom.xml</code> will
+be added only when you will be having enabled option to create Atom feed:</p>
 <pre><code>index.html
 sitemap.xml
 robots.txt
@@ -104,8 +85,8 @@ atom.xml
 images
   |-newimage.png
 </code></pre>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="server"></a>Server mode</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Server mode</h2>
 <p>To run the program in server mode, type in the directory where file <code>yass</code>
 is <code>./yass server [ProjectName]</code> where <code>[ProjectName]</code> is name of your site
 project. If you enabled the web server in <code>site.cfg</code> this will start it
@@ -124,7 +105,7 @@ sitemaps, it will be upgraded or created too if needed, same with file
 create <code>atom.xml</code> file if needed. If you want, you can set this command to
 terminate on any error occurence, during monitoring the site. Additionally,
 you can customize how directory listing looks, by editing <code>directory.html</code>
-file in layouts directory. More informations about available tags, you can
+file in layouts directory. More information about available tags, you can
 find in [AWS API documentation]
 (https://docs.adacore.com/aws-docs/aws/apiref.html#aws-services-directory).</p>
 <h3>Limitations</h3>
@@ -140,39 +121,34 @@ edit <code>atom.xml</code> file or delete it to regenerate it with <code>build</
 program and rebuild whole site with <code>build</code> command, because server can
 monitor only settings changes (it will not rebuild <code>.md</code> files).</li>
 </ul>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="help"></a>Help command</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Help command</h2>
 <p>This command gives only short information about all available program's
 commands. To run it, type in directory where the file <code>yass</code> is <code>./yass help</code>.</p>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="version"></a>Version command</h2>
-<p>This command gives only short information about the program version and it
-release date. To run it, type in directory where the file <code>yass</code> is
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Version command</h2>
+<p>This command gives only short information about the program version, and its
+released date. To run it, type in directory where the file <code>yass</code> is
 <code>./yass version</code>.</p>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="license"></a>License command</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->License command</h2>
 <p>This command gives only short information about the program license. To run
 it, type in directory where the file <code>yass</code> is <code>./yass license</code>.</p>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="readme"></a>Readme command</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Readme command</h2>
 <p>This command prints in terminal content of README.md file. To run it, type in
 directory where the file <code>yass</code> is <code>./yass readme</code>.</p>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="createfile"></a>Create empty markdown file</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Create empty markdown file</h2>
 <p>If you want to create a new empty (only with comments) markdown file in your
 site project, type in directory where the file <code>yass</code> is
 <code>./yass [path][filename].md</code>. You may omit file extension, it will be added
 automatically by the program.</p>
-<p><a href="#top">^ Top</a></p>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
 
       </div>
-      <div id="container">
-            <div id="left"><a href="quickstart.html" class="button">&lt;&lt; Quick Start</a></div>
-            <div id="right"><a href="tags.html" class="button">Tags &gt;&gt;</a></div>
-            <div id="center"><a href="index.html" class="button">Index</a></div>
-      </div>
-      <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-11-17 06:44:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+      <footer id="footer">
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2022-08-14 09:38:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

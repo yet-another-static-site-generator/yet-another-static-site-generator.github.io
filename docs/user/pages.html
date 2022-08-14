@@ -1,76 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <link href="assets/css/style.css" rel="stylesheet" />
-      <title>
-            Configuring Pages |
-         Yet Another Static Site (Generator) Documentation
-      </title>
+      <link href="https://yet-another-static-site-generator.github.io/assets/css/style.css" rel="stylesheet" />
+      <title>Yet Another Static Site (Generator)</title>
    </head>
    <body>
       <a name="top"></a>
       <header>
-         <h1>Yet Another Static Site (Generator) Documentation</h1>
-            <h2>Configuring Pages</h2>
+         <h1>Yet Another Static Site (Generator)</h1>
       </header>
       <div id="content">
-            <details>
-               <summary>Table of Contents</summary>
-               <ul>
-                  <li><a href="#general">General Informations</a></li>
-                  <li><a href="#configuration">Page configuration</a></li>
-               </ul>
-            </details>
-      <h2><a name="general"></a>General informations</h2>
+         <h2><!-- raw HTML omitted --><!-- raw HTML omitted -->General information</h2>
 <p>At this moment, all configuration for each page is inside files with page
 content. They have syntax: <code>[CommentMark] [Key]: [Value]</code>. Default setting
 for the <code>[CommendMark]</code> is <code>--</code> but you can change it in <code>site.cfg</code> file.</p>
 <ul>
 <li>Same as site settings, each pair must be in one line. Neither <code>Key</code> nor
-<code>Value</code> can't contains new line.</li>
+<code>Value</code> can't contain new line.</li>
 <li>Settings can be added in any place of file (at beginning, between text, at
 end, etc) just they must start with new line.</li>
 <li>All settings are case-sensitive.</li>
 </ul>
-<p><a href="#top">^ Top</a></p>
-<h2><a name="configuration"></a>Page configuration</h2>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Page configuration</h2>
 <p>Available settings for each page:</p>
 <p>If you have enabled creation of sitemap in the project config file, you can
 set some sitemap parameters too. All sitemap parameter are optional. More
-informations about how sitemap parameters works, you can find at
+information about how sitemap parameters works, you can find at
 <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">Sitemaps protocol</a>
 page. All sitemap settings are optional.</p>
 <ul>
-<li>priority - The priority of this URL relative to other URLs on your site.
+<li>priority: The priority of this URL relative to other URLs on your site.
 Valid values range from <code>0.0</code> to <code>1.0</code>. This value does not affect how your
 pages are compared to pages on other sites—it only lets the search engines
 know which pages you deem most important for the crawlers.</li>
-<li>changefreq - How frequently the page is likely to change, value can be:
+<li>changefreq: How frequently the page is likely to change, value can be:
 <code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code> or <code>never</code>.</li>
-<li>insitemap - optional setting. Did page should be included in sitemap. If you
+<li>insitemap: optional setting. Did page should be included in sitemap. If you
 want to exclude this page from the sitemap, set it to <code>insitemap: false</code>.
 Default value is <code>true</code>.</li>
 </ul>
 <p>If you enabled creation of Atom feed in the project config file, you can some
 Atom feed parameters too. How much and how it works, depends on selected source
-of the Atom feed. All of this parameters can be used as a normal page tags too.
-More informations about how Atom feeds parameters works, you can find at
+of the Atom feed. All of these parameters can be used as a normal page tags too.
+More information about how Atom feeds parameters works, you can find at
 <a href="https://validator.w3.org/feed/docs/atom.html">Introduction to Atom</a></p>
 <p>If you selected source of the Atom feed as <code>tags</code>:</p>
 <ul>
-<li>title - Title which will be used as the Atom title entry. Required setting if
+<li>title: Title which will be used as the Atom title entry. Required setting if
 creating Atom feed is enabled.</li>
-<li>updated - Time stamp when page (and Atom feed entry) last time was updated.
+<li>updated: Time stamp when page (and Atom feed entry) last time was updated.
 Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style. This
 parameter is optional. If you not set it, the program will use time when file
 html (created from this markdown file) was last time updated.</li>
-<li>author - The name of the author of the page. This parameter is optional.</li>
-<li>authoremail - The email address of the author of the page. This parameter is
+<li>author: The name of the author of the page. This parameter is optional.</li>
+<li>authoremail: The email address of the author of the page. This parameter is
 optional.</li>
-<li>summary - Short summary for this page. This parameter is optional.</li>
-<li>content - Content of the page in Atom feed. If you not set it, then the
+<li>summary: Short summary for this page. This parameter is optional.</li>
+<li>content: Content of the page in Atom feed. If you not set it, then the
 program will load here markdown version of the page content. This parameter
 is optional.</li>
 </ul>
@@ -83,23 +71,23 @@ Here is super awesome text.
 <p>If you selected source of the Atom feed as <code>[filename]</code> and this markdown file
 will be used as a source for the Atom feed:</p>
 <ul>
-<li>title - Composite tag (if you want to have more that one entry in the Atom
+<li>title: Composite tag (if you want to have more than one entry in the Atom
 feed) which will be used as the Atom entries titles. Required setting if
 creating Atom feed is enabled.</li>
-<li>id - name or id of the HTML element which will be entry point for each Atom
+<li>id: name or ID of the HTML element which will be entry point for each Atom
 entry. It will be added to the page address in Atom entries. Required
 setting for creating Atom feed from one file.</li>
-<li>updated - Time stamp when selected Atom feed entry was last time updated.
+<li>updated: Time stamp when selected Atom feed entry was last time updated.
 Must be in <a href="http://www.faqs.org/rfcs/rfc3339.html">RFC3339</a> time style.
 Required for each entry if creating Atom feed from one file is enabled.</li>
-<li>author - The name of the author of selected Atom feed entry. This is
+<li>author: The name of the author of selected Atom feed entry. This is
 optional parameter for each entry.</li>
-<li>authoremail - The email address of the author of selected Atom feed entry.
+<li>authoremail: The email address of the author of selected Atom feed entry.
 This is optional parameter for each entry.</li>
-<li>summary - Short summary for selected Atom feed entry. This is optional
+<li>summary: Short summary for selected Atom feed entry. This is optional
 parameter for each entry.</li>
-<li>content - Content of selected Atom feed entry. If you not set it, then the
-program will load here id of selected Atom feed entry. This parameter is
+<li>content: Content of selected Atom feed entry. If you not set it, then the
+program will load here ID of selected Atom feed entry. This parameter is
 optional.</li>
 </ul>
 <p>Example of markdown file <code>test.md</code> with Atom feed settings for Atom feed
@@ -148,19 +136,26 @@ inside <code>news.html</code> layout to show that news:</p>
 </code></pre>
 <p>One parameter is always required:</p>
 <ul>
-<li>layout - the name of file (without extension) which will be used as template
+<li>layout: the name of file (without extension) which will be used as template
 for the page. This must be existing file from the project layouts directory.</li>
 </ul>
-<p><a href="#top">^ Top</a></p>
+<p>Optional parameter always available for pages:</p>
+<ul>
+<li>canonicallink: Set the page canonical link. It is used by search engines
+(by some even required). If you don't set it here, the program will generate
+it automatically. It must be a full URL (with https://).</li>
+<li>author: The name of the author of the page. Will be used to set meta link
+<strong>author</strong>. If not set, then setting <code>Author</code> from the project configuration file
+will be used.</li>
+<li>description: The description of the page, visible in search results in search
+engines. Will be used to set meta link <strong>description</strong>. If not set, then setting
+<code>Description</code> from the project configuration file will be used.</li>
+</ul>
+<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
 
       </div>
-      <div id="container">
-            <div id="left"><a href="configuration.html" class="button">&lt;&lt; Site Config</a></div>
-            <div id="right"><a href="extending.html" class="button">Extending &gt;&gt;</a></div>
-            <div id="center"><a href="index.html" class="button">Index</a></div>
-      </div>
-      <footer>
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2019-11-17 06:44:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+      <footer id="footer">
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2022-08-14 09:38:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
