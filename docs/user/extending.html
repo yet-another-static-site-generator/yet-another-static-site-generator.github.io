@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
    <head>
       <meta charset="UTF-8">
-      <link href="/assets/css/style.css" rel="stylesheet" />
-      <title>Yet Another Static Site (Generator)</title>
+      <meta name="viewport" content="width=device-width">
+      <link href="assets/css/style.css" rel="stylesheet" />
+      <title>
+            Extending Program |
+         Yet Another Static Site (Generator) Documentation
+      </title>
    </head>
    <body>
       <a name="top"></a>
       <header>
-         <h1>Yet Another Static Site (Generator)</h1>
+         <h1>Yet Another Static Site (Generator) Documentation</h1>
+            <h2>Extending Program</h2>
       </header>
       <div id="content">
-         <h2><!-- raw HTML omitted --><!-- raw HTML omitted -->General information</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#general">General Information</a></li>
+                  <li><a href="#adding">Adding modules to the site project</a></li>
+                  <li><a href="#communication">Communication between YASS and modules</a></li>
+                  <li><a href="#api">API information</a></li>
+                  <li><a href="#example">Example module</a></li>
+               </ul>
+            </details>
+      <h2><a name="general"></a>General information</h2>
 <p>YASS can be extended with any script or other program which can be run on your
 machine. It means, for example Bash, Perl, Python scripts or any compiled
 program, anything what can be run from terminal. Second requirement is that
@@ -19,8 +34,8 @@ extension (called <em>module</em>) must have ability to read environment variabl
 read standard input and write to standard output, because in that ways YASS and
 module communicate. Modules are per site not assigned to the program, thus
 every site can have own set of modules to run.</p>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Adding modules to the site project</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="adding"></a>Adding modules to the site project</h2>
 <p>After creating a site project, you will have directory <code>_modules</code> (with default
 setting) inside site project directory. This directory has structure:</p>
 <pre><code>[ProjectName]
@@ -61,8 +76,8 @@ program finish manipulating file, you must put it in path <code>modules/post</co
 deeper. Thus, modules can be not only one executable file, but even whole
 directories. In that situation, you will need to provide any &quot;entry point&quot;: one
 executable to run that complicated module.</p>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Communication between YASS and modules</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="communication"></a>Communication between YASS and modules</h2>
 <p>There are two ways for communication between the program and modules.</p>
 <ul>
 <li>By environment variables: Before running modules in <em>pre</em> hook YASS
@@ -77,8 +92,8 @@ output of the module. Here is available very simple API to manipulate then
 template tags. To use it, module should just send proper command to default
 output and listen to the program's response on default input.</li>
 </ul>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->API information</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="api"></a>API information</h2>
 <ul>
 <li>gettag [tagname]: this API command sent to the program, returns value of
 <code>tagname</code> tag. If selected tag is the simple tag, then the program
@@ -99,8 +114,8 @@ information what was wrong.</li>
 tags either.</li>
 <li>Whole command must be one line command, it can't contain new line symbols.</li>
 </ul>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Example module</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="example"></a>Example module</h2>
 <p>This is very small example of module, which show name of currently processed
 file, then show value of tag &quot;Name&quot;, then set second value of tag &quot;news&quot; and
 at the end show all values of the tag &quot;news&quot;.</p>
@@ -142,11 +157,16 @@ news = first news
 news = second news
 news = last news
 </code></pre>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
-      <footer id="footer">
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2022-08-14 09:38:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+      <div id="container">
+            <div id="left"><a href="pages.html" class="button">&lt;&lt; Page Config</a></div>
+            <div id="right"><a href="changes.html" class="button">Changelog &gt;&gt;</a></div>
+            <div id="center"><a href="index.html" class="button">Index</a></div>
+      </div>
+      <footer>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2024-08-23 22:23:45 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

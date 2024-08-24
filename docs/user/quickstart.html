@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
    <head>
       <meta charset="UTF-8">
-      <link href="/assets/css/style.css" rel="stylesheet" />
-      <title>Yet Another Static Site (Generator)</title>
+      <meta name="viewport" content="width=device-width">
+      <link href="assets/css/style.css" rel="stylesheet" />
+      <title>
+            Quick Start Guide |
+         Yet Another Static Site (Generator) Documentation
+      </title>
    </head>
    <body>
       <a name="top"></a>
       <header>
-         <h1>Yet Another Static Site (Generator)</h1>
+         <h1>Yet Another Static Site (Generator) Documentation</h1>
+            <h2>Quick Start Guide</h2>
       </header>
       <div id="content">
-         <h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Notes</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#notes">Notes</a></li>
+                  <li><a href="#quickstart">Quick start</a></li>
+               </ul>
+            </details>
+      <h2><a name="notes"></a>Notes</h2>
 <ul>
 <li>All commands should be executed in this same directory where file <code>yass</code> is.</li>
 <li>If you want to run the program from other directory, you should set the
@@ -22,8 +34,8 @@ name of AppImage file (if not changed, this will be <code>yass-x86_64.AppImage</
 <li>We assume that you have installed all program requirements, which you can
 find in <a href="installation.html">installation</a> chapter.</li>
 </ul>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Quick start</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="quickstart"></a>Quick start</h2>
 <ol>
 <li>To create NewSite project, type in console <code>./yass createnow NewSite</code>. This
 will create skeletal project with default configuration in directory
@@ -43,11 +55,16 @@ to preview site in browser. Additionally, it will be monitoring any changes
 to files inside project. If any file will be modified, it will be
 regenerated.</li>
 </ol>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
-      <footer id="footer">
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2022-08-14 09:38:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+      <div id="container">
+            <div id="left"><a href="installation.html" class="button">&lt;&lt; Installation</a></div>
+            <div id="right"><a href="details.html" class="button">Details &gt;&gt;</a></div>
+            <div id="center"><a href="index.html" class="button">Index</a></div>
+      </div>
+      <footer>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2024-08-23 22:23:45 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>

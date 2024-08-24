@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
    <head>
       <meta charset="UTF-8">
-      <link href="/assets/css/style.css" rel="stylesheet" />
-      <title>Yet Another Static Site (Generator)</title>
+      <meta name="viewport" content="width=device-width">
+      <link href="assets/css/style.css" rel="stylesheet" />
+      <title>
+            Template Tags |
+         Yet Another Static Site (Generator) Documentation
+      </title>
    </head>
    <body>
       <a name="top"></a>
       <header>
-         <h1>Yet Another Static Site (Generator)</h1>
+         <h1>Yet Another Static Site (Generator) Documentation</h1>
+            <h2>Template Tags</h2>
       </header>
       <div id="content">
-         <h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Types of tags</h2>
+            <details>
+               <summary>Table of Contents</summary>
+               <ul>
+                  <li><a href="#types">Types of tags</a></li>
+                  <li><a href="#using">Using tags inside templates files</a></li>
+               </ul>
+            </details>
+      <h2><a name="types"></a>Types of tags</h2>
 <p>Here are two types of tags:</p>
 <h3>Global tags</h3>
 <p>They are defined for whole site in <em>site.cfg</em> file. This file has standard
@@ -76,8 +88,8 @@ summary = and another summary
 <p>Main usage of composite tags is <a href="http://docs.adacore.com/aws-docs/templates_parser/template_statements.html#table-statement">TABLE statement</a>
 inside templates. All rules which applies to the normal template tags also
 apply to composite tags.</p>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
-<h2><!-- raw HTML omitted --><!-- raw HTML omitted -->Using tags inside templates files</h2>
+<p><a href="#top">^ Top</a></p>
+<h2><a name="using"></a>Using tags inside templates files</h2>
 <p>To use any tags inside template file you must surround selected tag with values
 sets in <code>site.cfg</code> file for <code>StartTagSeparator</code> and <code>EndTagSeparator</code>. For
 example, with default setting for <code>StartTagSeparator</code> to <code>{%</code> and default
@@ -100,11 +112,16 @@ whole section.</li>
 <p><strong>Note:</strong> In YASS you will use by default <code>{%</code> to start a tag (instead of <code>@_</code>)
 and <code>%}</code> to end a tag (instead of <code>_@</code>), unless you set other values in
 <code>site.cfg</code> file.</p>
-<p><!-- raw HTML omitted -->^ Top<!-- raw HTML omitted --></p>
+<p><a href="#top">^ Top</a></p>
 
       </div>
-      <footer id="footer">
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2022-08-14 09:38:58 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+      <div id="container">
+            <div id="left"><a href="details.html" class="button">&lt;&lt; Details</a></div>
+            <div id="right"><a href="configuration.html" class="button">Site Config &gt;&gt;</a></div>
+            <div id="center"><a href="index.html" class="button">Index</a></div>
+      </div>
+      <footer>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a>. Generated: 2024-08-23 22:23:45 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
