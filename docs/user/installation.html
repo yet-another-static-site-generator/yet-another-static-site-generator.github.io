@@ -11,25 +11,31 @@
          <h1>Yet Another Static Site (Generator)</h1>
       </header>
       <div id="content">
-         <h2><a name="requirements"></a>Requirements</h2>
+         <h2><a name="downloading"></a>Downloading</h2>
+<p>The easiest way to get YASS is by downloading the <a href="https://github.com/yet-another-static-site-generator/yass/releases/latest">latest release</a> for your operating system.  For example, if you have windows, then download <code> yass-windows_x86_64.zip</code>.</p>
+<h2><a name="requirements"></a>Requirements</h2>
 <p>To run the program or build it from the sources you need <em>libcmark</em> library
 which should be available in most Linux distributions. If not, you can
 download it source code from <a href="https://github.com/commonmark/cmark">GitHub</a>.
 Please refer to it documentation on how to compile it.</p>
-<p>If you use downloaded AppImage version of the program, you don't need any
-other dependencies. More information about using AppImage files you can find
-in <a href="https://docs.appimage.org/user-guide/run-appimages.html">AppImage documentation</a></p>
 <p><a href="#top">^ Top</a></p>
 <h2><a name="buildprogram"></a>Build from sources</h2>
-<h3>Docker way</h3>
-<p>You can use Docker images <code>adabuild</code> and <code>adabuildwin64</code> from the project
-<a href="https://www.laeran.pl/repositories/dockerada">Docker Ada</a>. They contain all libraries
-and compiler needed to build the program.</p>
-<p>To build the program for Linux, download <code>adabuild</code> image and type in console:</p>
-<p><code>docker run --rm -v [path to source code]:/app ghcr.io/thindil/adabuild /bin/bash -c &quot;cd /app &amp;&amp; gprbuild -p -P yass.gpr -XMode=release&quot;</code></p>
-<p>To build the program for Windows 64-bit, download <code>adabuildwin64</code> image and type in console:</p>
-<p><code>docker run --rm -v [path to source code]:/app ghcr.io/thindil/adabuildwin64 /bin/bash -c &quot;cd /app &amp;&amp; gprbuild -p -P yass.gpr -XMode=release --target=x86_64-windows&quot;</code></p>
-<h3>Classic way</h3>
+<h3>Using Alire</h3>
+<p>The easiest way to build YASS is via <a href="https://alire.ada.dev/">Alire</a>.  If don't
+have alire already, you can get it from the main website or auto-install it via
+<a href="https://www.getada.dev/">Getada.dev</a>.</p>
+<p>To build and install it, simply run <code>alr install yass</code> and yass will automatically be
+added to alire's binary folder (default is <code>$HOME/.alire/bin</code>).</p>
+<p>If you'd rather just download and build manually, navigate to a folder where you
+wish to build YASS and issue the following commands:</p>
+<ol>
+<li><code>alr get yass</code></li>
+<li><code>cd yass*</code></li>
+<li><code>alr update &amp;&amp; alr build</code>
+YASS will now be in the project's <code>./bin</code> directory.</li>
+</ol>
+<p>This should automatically pull all of the dependencies in, ie AWS and libcmark.</p>
+<h3>Using gprbuild</h3>
 <h4>Preparations</h4>
 <p>To build YASS from the source you will need few things:</p>
 <ul>
@@ -79,7 +85,7 @@ file is):</p>
 
       </div>
       <footer id="footer">
-         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2024-08-26 17:31:21 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
+         <p>&copy; 2019 <a href="https://matrix.to/#/@thindil:matrix.org">Bartek thindil Jasicki</a> &amp; 2022 <a href="https://github.com/AJ-Ianozi">A.J. Ianozi</a>. Generated: 2024-08-26 18:20:19 with <a href="https://yet-another-static-site-generator.github.io/">Yass</a>, color scheme: <a href="https://github.com/morhetz/gruvbox">Gruvbox</a></p>
       </footer>
    </body>
 </html>
